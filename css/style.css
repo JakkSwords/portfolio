@@ -1,0 +1,409 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  text-align: center;}
+
+body:not(header) {
+  background: url(img/landing.jpg);
+  background-position: center center;
+  background-size: cover; }
+
+section {
+  min-height: 100%;}
+
+a {
+  text-decoration: none;}
+
+li {
+  list-style-type: none;}
+
+h1, h2, h3, a {
+  font-family: 'Anton', sans-serif;
+  font-weight: 500;
+  color: #232323;  }
+
+h2 {
+  color: #77787A;}
+
+h3 {font-size: 80px;
+  padding-top: 8%;
+  margin-bottom: 5px;}
+
+h4, p {
+  font-family: 'Yanone Kaffeesatz', sans-serif; color: color: #343A36;}
+
+hr {width: 50px;
+  height: 3px;
+  background: #343A36;
+  border: 0;
+  margin: 0 auto 40px auto; }
+
+li, #logo, img, #home i, .submit, .nav div.main_list ul li a {
+  transition: all 300ms;
+  -webkit-transition: all 300ms;
+  -moz-transition: all 300ms;
+  -o-transition: all 300ms;}
+
+
+/* HEADER ****************************/
+
+.nav {
+    width: 100%;
+    height: 65px;
+    position: fixed;
+    line-height: 65px;
+    text-align: center;
+    background-color: #232323;
+    z-index: 1;
+}
+
+.nav div.logo a img {
+    float: left;
+    width: 150px;
+    height: auto;
+    padding-left: 3rem;
+}
+
+
+
+.nav div.logo a:hover {
+    color: #00E676;
+}
+
+.nav div.main_list {
+    height: 65px;
+    float: right;
+}
+
+.nav div.main_list ul {
+    width: 100%;
+    height: 65px;
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav div.main_list ul li {
+    width: auto;
+    height: 65px;
+    padding: 0;
+    padding-right: 3rem;
+}
+
+.nav div.main_list ul li a {
+    text-decoration: none;
+    color: #f0f0f0;
+    line-height: 65px;
+    font-size: 2.4rem;
+}
+
+.nav div.main_list ul li a:hover {
+    color: #77787A;
+}
+
+
+.navTrigger {
+    display: none;
+}
+
+.nav {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    -webkit-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+}
+
+
+/* Media qurey section */
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .container {
+        margin: 0;
+    }
+}
+
+@media screen and (max-width:785px) {
+    .navTrigger {
+        display: block;
+    }
+    .nav div.logo {
+        margin-left: 15px;
+    }
+    .nav div.main_list {
+        width: 100%;
+        height: 0;
+        overflow: hidden;
+    }
+    .nav div.show_list {
+        height: auto;
+        display: none;
+    }
+    .nav div.main_list ul {
+        flex-direction: column;
+        width: 100%;
+        height: 100vh;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        background-color: #232323;
+        background-position: center top;
+    }
+    .nav div.main_list ul li {
+        width: 100%;
+        text-align: right;
+    }
+    .nav div.main_list ul li a {
+        text-align: center;
+        width: 100%;
+        font-size: 3rem;
+        padding: 20px;
+        color: #f0f0f0;
+    }
+    .nav div.media_button {
+        display: block;
+    }
+}
+
+
+/* Animation */
+/* Inspiration taken from Dicson https://codemyui.com/simple-hamburger-menu-x-mark-animation/ */
+
+.navTrigger {
+    cursor: pointer;
+    width: 30px;
+    height: 25px;
+    margin: auto;
+    position: absolute;
+    right: 30px;
+    top: 0;
+    bottom: 0;
+}
+
+.navTrigger i {
+    background-color: #fff;
+    border-radius: 2px;
+    content: '';
+    display: block;
+    width: 100%;
+    height: 4px;
+}
+
+.navTrigger i:nth-child(1) {
+    -webkit-animation: outT 0.8s backwards;
+    animation: outT 0.8s backwards;
+    -webkit-animation-direction: reverse;
+    animation-direction: reverse;
+}
+
+.navTrigger i:nth-child(2) {
+    margin: 5px 0;
+    -webkit-animation: outM 0.8s backwards;
+    animation: outM 0.8s backwards;
+    -webkit-animation-direction: reverse;
+    animation-direction: reverse;
+}
+
+.navTrigger i:nth-child(3) {
+    -webkit-animation: outBtm 0.8s backwards;
+    animation: outBtm 0.8s backwards;
+    -webkit-animation-direction: reverse;
+    animation-direction: reverse;
+}
+
+.navTrigger.active i:nth-child(1) {
+    -webkit-animation: inT 0.8s forwards;
+    animation: inT 0.8s forwards;
+}
+
+.navTrigger.active i:nth-child(2) {
+    -webkit-animation: inM 0.8s forwards;
+    animation: inM 0.8s forwards;
+}
+
+.navTrigger.active i:nth-child(3) {
+    -webkit-animation: inBtm 0.8s forwards;
+    animation: inBtm 0.8s forwards;
+}
+
+@-webkit-keyframes inM {
+    50% {
+        -webkit-transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(45deg);
+    }
+}
+
+@keyframes inM {
+    50% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(45deg);
+    }
+}
+
+@-webkit-keyframes outM {
+    50% {
+        -webkit-transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(45deg);
+    }
+}
+
+@keyframes outM {
+    50% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(45deg);
+    }
+}
+
+@-webkit-keyframes inT {
+    0% {
+        -webkit-transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+        -webkit-transform: translateY(9px) rotate(0deg);
+    }
+    100% {
+        -webkit-transform: translateY(9px) rotate(135deg);
+    }
+}
+
+@keyframes inT {
+    0% {
+        transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+        transform: translateY(9px) rotate(0deg);
+    }
+    100% {
+        transform: translateY(9px) rotate(135deg);
+    }
+}
+
+@-webkit-keyframes outT {
+    0% {
+        -webkit-transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+        -webkit-transform: translateY(9px) rotate(0deg);
+    }
+    100% {
+        -webkit-transform: translateY(9px) rotate(135deg);
+    }
+}
+
+@keyframes outT {
+    0% {
+        transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+        transform: translateY(9px) rotate(0deg);
+    }
+    100% {
+        transform: translateY(9px) rotate(135deg);
+    }
+}
+
+@-webkit-keyframes inBtm {
+    0% {
+        -webkit-transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+        -webkit-transform: translateY(-9px) rotate(0deg);
+    }
+    100% {
+        -webkit-transform: translateY(-9px) rotate(135deg);
+    }
+}
+
+@keyframes inBtm {
+    0% {
+        transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-9px) rotate(0deg);
+    }
+    100% {
+        transform: translateY(-9px) rotate(135deg);
+    }
+}
+
+@-webkit-keyframes outBtm {
+    0% {
+        -webkit-transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+        -webkit-transform: translateY(-9px) rotate(0deg);
+    }
+    100% {
+        -webkit-transform: translateY(-9px) rotate(135deg);
+    }
+}
+
+@keyframes outBtm {
+    0% {
+        transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-9px) rotate(0deg);
+    }
+    100% {
+        transform: translateY(-9px) rotate(135deg);
+    }
+}
+
+.affix {padding: 0; background-color: #111;}
+
+
+
+/* HOME ****************************/
+
+#home h1 {margin: 240px auto 0 auto; font-size: 110px;}
+#home h2 {margin: 0 auto 0 auto; font-size: 50px;}
+#home i {font-size: 100px; margin-top: 8%; opacity: 0.7; }
+#home i:hover {opacity: 1;}
+
+/* ABOUT ****************************/
+
+#about img {width: 240px;}
+#about img:hover {transform: scale(1.3); -webkit-transform: scale(1.3); -moz-transform: scale(1.3); -o-transform: scale(1.3);}
+#about h4 {font-size: 40px;}
+#about p {width: 80%; margin: 0 auto 0 auto; font-size: 20px;}
+
+/* WORK ****************************/
+
+#projects {width: auto; margin: 0 auto 0 auto;}
+#projects ul {padding: 0; margin: 100px;}
+#projects img { border-radius: 10px; width: auto;}
+#projects img:hover {transform: scale(1.1); -webkit-transform: scale(1.1); -moz-transform: scale(1.1); -o-transform: scale(1.1); box-shadow: 2px 3px 8px #888888;}
+
+/* CONTACT ****************************/
+
+form input:first-child {margin-top: 10px;}
+form input, textarea, .submit {font-family: 'Yanone Kaffeesatz', sans-serif; color: color: #343A36; font-size: 15px; margin-bottom: 10px; border-radius: 2px; border: 2px solid; border-color: #232323; }
+form input {width: 60%; height: 30px;}
+form textarea {width: 60%; height: 200px; resize: none;}
+
+
+.email, .subject {color: #343A36; padding-left: 10px;}
+.input_area {color: #343A36; padding-left: 10px; padding-top: 10px;}
+
+::-webkit-input-placeholder {color: #999999;}
+::-moz-placeholder {color: #999999;}
+:-ms-input-placeholder {color: #999999;}
+:-moz-placeholder {color: #999999;}
+
+.submit {background-color: #f0f0f0; color: ##232323; width: 62%; height: 50px;}
+.submit:hover {background-color: #232323; color: #f0f0f0;}
+
+/* FOOTER ****************************/
+
+footer {width: 100%; height: 70px; background-color: #232323;}
+footer p {font-size: 16px; color: #f0f0f0; padding-top: 30px;}
