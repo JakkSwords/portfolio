@@ -54,7 +54,7 @@
       <hr>
       <img src="css/img/avatar.png" alt="avatar">
       <h4>JAKKSWORDS | Jacob Edler</h4>
-      <p>Hello!<br>My name is Jacob Edler and I'm a 23 year-old hobby-media-designer. Currently I'm searching for a job in media design. <br>May this website be a part of my application! <br>In the moment I'm working on a example web page, with the help of a course called "The Essential Web Developer Courese". The Current Status of the Website can be seen below in the section <a href="#work">"WORK"</a>.</p>
+      <p>Hello!<br>My name is Jacob Edler and I'm a 23 year-old hobby-media-designer. Currently I'm searching for a job in media design. <br>May this website be a part of my application! <br>In the moment I'm working on a example web page, with the help of a course called "The Essential Web Developer Course". The Current Status of the Website can be seen below in the section <a href="https://vast-earth-49177.herokuapp.com/">"WORK"</a>.</p>
     </section>
 
 <!-- WORK ----------------------------------------->
